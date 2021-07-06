@@ -15,3 +15,5 @@ Create a plugin:
 ## Modified behaviour
 
     bin/console plugin:create SwagExample --namespace 'Swag\Example' --composer-name 'swag/shopware6-example' --description 'My Swag Example'
+
+Make sure to be careful with the `--namespace` option: The backslash should be escaped. If you are using double quotes, the backslash needs to be a double-backslash (`Swag\\Example`).
