@@ -3,6 +3,7 @@ This plugin enhances the Shopware 6 command `plugin:create`
 
 ## Installation
 
+    composer config repositories.froshPluginCreate vcs git@github.com:yireo-shopware6/FroshPluginCreator.git
     composer require frosh/plugin-creator
     bin/console plugin:refresh
     bin/console plugin:install --activate FroshPluginCreator
