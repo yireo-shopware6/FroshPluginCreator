@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <service id="Frosh\PluginCreator\Command\PluginCreateCommand">
+            <argument type="service" id="Frosh\PluginCreator\Util\TemplateReader"/>
+            <argument type="service" id="Frosh\PluginCreator\Util\FileGenerator"/>
+            <argument>%kernel.project_dir%</argument>
+            <tag name="console.command"/>
+        </service>
+
+        <service id="Frosh\PluginCreator\Util\FileGenerator">
+        </service>
+
+        <service id="Frosh\PluginCreator\Util\TemplateReader">
+            <argument type="service" id="kernel"/>
+            <argument key="$bundleClassTemplate">bundle-class.tmpl</argument>
+            <argument key="$composerJsonTemplate">composer-json.tmpl</argument>
+            <argument key="$serviceXmlTemplate">service-xml.tmpl</argument>
+            <argument key="$configXmlTemplate">config-xml.tmpl</argument>
+        </service>
+    </services>
+</container>

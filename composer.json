@@ -1,0 +1,17 @@
+{
+  "name": "frosh/shopware6-plugin-creator",
+  "description": "Improved plugin creator",
+  "type": "shopware-platform-plugin",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Frosh\\PluginCreator\\": "src/"
+    }
+  },
+  "extra": {
+    "shopware-plugin-class": "Frosh\\PluginCreator\\FroshPluginCreator",
+    "label": {
+      "en-GB": "Improved plugin creator"
+    }
+  }
+}
